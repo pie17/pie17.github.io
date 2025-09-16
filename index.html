@@ -104,18 +104,24 @@
       height:48vh;
       max-height:650px;
       object-fit:cover;
+      object-position:center;
       transform:translateZ(0);
       transition: transform .35s ease, filter .35s ease, box-shadow .35s ease;
-      filter: contrast(1.08) brightness(1.04) saturate(1.03);
+      filter: brightness(0.65) contrast(1.08) saturate(1.05);
       -webkit-backface-visibility:hidden;
       z-index:1;
       position:relative;
     }
 
+    /* Football image aligned to top */
+    .project-image-container img[alt*="Football"] {
+      object-position: top center;
+    }
+
     .project-image-container:hover img{
       transform: scale(1.035);
       box-shadow: 0 18px 45px rgba(0,0,0,0.6);
-      filter: brightness(1.1) contrast(1.12) saturate(1.06) grayscale(0.02);
+      filter: brightness(0.75) contrast(1.12) saturate(1.1);
     }
 
     .project-title-overlay{
@@ -130,12 +136,14 @@
       font-size: clamp(24px,5vw,52px);
       color:#ffffff;
       letter-spacing: 1px;
-      text-shadow: 0 6px 18px rgba(0,0,0,0.75);
       pointer-events: none;
-      background: transparent;
-      padding: 0 8px;
-      line-height:1.1;
+      padding: 6px 14px;
+      line-height:1.2;
       text-align:center;
+      background: rgba(15,15,16,0.45); /* vetro satinato */
+      backdrop-filter: blur(6px);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.55);
     }
 
     .project-image-container:hover .project-title-overlay{
@@ -201,7 +209,7 @@
       </div>
     </header>
 
-    <!-- Projects ... (resto invariato) -->
+    <!-- Projects ... -->
     <!-- AIRBNB -->
     <section class="project">
       <div class="project-image-container">
@@ -218,8 +226,6 @@
         <a class="btn" href="notebooks/EDA_airbnb.html" target="_blank" rel="noopener">View full notebook</a>
       </div>
     </section>
-
- 
 
     <!-- ELECTRIC CARS -->
     <section class="project">

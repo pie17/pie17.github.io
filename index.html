@@ -3,97 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Pietro Tegon</title>
+  <title>My Projects</title>
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      margin: 40px; 
-      background-color: #121212; 
-      color: #f0f0f0; 
-      text-align: center; 
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2 { color: #f0f0f0; }
-    .project { margin: 40px 0; }
-    .dropdown-content {
-      display: none; 
-      margin-top: 15px; 
-      padding: 20px;
-      background: #1e1e1e; 
-      border: 1px solid #333; 
-      border-radius: 10px; 
-      text-align: left;
-      max-width: 90vw;
-      margin-left: auto;
-      margin-right: auto;
+
+    h1 {
+      font-size: 3em;
+      margin: 20px 0 10px 0;
+      font-weight: bold;
     }
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .project {
+      margin: 60px 0;
+      position: relative;
+      display: inline-block;
+    }
+
     .project-image-container {
       position: relative;
       display: inline-block;
     }
+
+    .project-image-container img {
+      width: 70vw;
+      max-height: 50vh;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+      filter: contrast(1.05) brightness(1.02);
+    }
+
+    .project-image-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #1E90FF;
+      filter: brightness(1.1) contrast(1.1);
+    }
+
     .project-title-overlay {
       position: absolute;
-      top: 10px;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: rgba(0,0,0,0.6);
       color: #fff;
-      font-size: 2em;
+      font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+      font-size: 3em;
       font-weight: 900;
-      padding: 10px 20px;
-      border-radius: 10px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
       pointer-events: none;
     }
-    img { 
-      width: 70vw; 
-      max-height: 50vh; 
-      object-fit: cover; 
-      cursor: pointer; 
-      border-radius: 10px; 
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    .description {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+      line-height: 1.6;
     }
-    img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px #1E90FF;
+
+    a {
+      color: #1E90FF;
+      text-decoration: none;
+      font-weight: bold;
     }
-    a { color: #1E90FF; text-decoration: none; margin-right: 10px; }
-    p { line-height: 1.6; margin-bottom: 10px; }
   </style>
 </head>
 <body>
+  <h1>My Projects</h1>
 
-  <h1>Pietro Tegon</h1>
-  <p>Data enthusiast with projects in data analysis and design.</p>
-  <a href="LINK_LINKEDIN">LinkedIn</a> | 
-  <a href="LINK_GITHUB">GitHub</a> | 
-  <a href="CV.pdf">Download CV</a>
-
-  <h2>Portfolio</h2>
+  <div class="intro">
+    <p><b>English:</b> I am a Digital Management student at H-Farm. After one of my courses, I decided to deepen my knowledge of data on my own, working on several projects that allowed me to practice data collection, cleaning, visualization, and interpretation.</p>
+    <p><b>Italiano:</b> Sono uno studente di Digital Management ad H-Farm. Dopo uno dei corsi, ho deciso di approfondire il mondo dei dati autonomamente, realizzando diversi progetti che mi hanno permesso di esercitarmi nella raccolta, pulizia, visualizzazione e interpretazione dei dati.</p>
+  </div>
 
   <!-- Airbnb -->
   <div class="project">
     <div class="project-image-container">
       <div class="project-title-overlay">Airbnb EDA</div>
-      <img src="img/airbnb.jpg" alt="Airbnb Project" onclick="toggleDropdown('proj1')">
+      <a href="EDA_airbnb.html" target="_blank">
+        <img src="airbnb.jpg" alt="Airbnb project">
+      </a>
     </div>
-    <div id="proj1" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> Airbnb, founded in 2008, has rapidly transformed the landscape of global travel and accommodation. As an online marketplace, it connects hosts offering unique lodging spaces with travelers seeking alternatives to traditional hotels. This project examines the influence and use of Airbnb in three major cities across three different continents: Paris, Tokyo, and New York. Each city presents a unique cultural and social landscape, demonstrating how Airbnb adapts to diverse environments. In Paris, the romantic and historic ambiance is reflected in the variety of accommodations offered. Tokyo provides a local experience amidst a fast-paced environment. New York showcases Airbnb’s ability to cater to a wide range of tastes and preferences. This project examines differences in Airbnb stays, including price, type of stay, and neighborhood trends.</p>
-      <p><strong>Introduzione (IT):</strong> Airbnb, fondata nel 2008, ha rapidamente trasformato il panorama dei viaggi globali e dell'ospitalità. Come marketplace online, collega host che offrono alloggi unici con viaggiatori in cerca di alternative agli hotel tradizionali. Questo progetto analizza l'uso e l'influenza di Airbnb in tre grandi città di tre continenti: Parigi, Tokyo e New York. Ogni città presenta un paesaggio culturale e sociale unico, mostrando come Airbnb si adatti a diversi ambienti. A Parigi, l'atmosfera romantica e storica si riflette nella varietà di alloggi offerti. Tokyo offre un'esperienza locale in un contesto frenetico. New York mostra la capacità di Airbnb di soddisfare gusti e preferenze diversi. Questo progetto esamina differenze nei soggiorni Airbnb, inclusi prezzo, tipo di alloggio e tendenze dei quartieri.</p>
-      <a href="notebooks/EDA_airbnb.html" target="_blank">View Full Notebook</a>
-      <a href="LINK_REPO_AIRBNB">GitHub Repository</a>
+    <div class="description">
+      <p><b>English:</b> This project provides an exploratory data analysis (EDA) of Airbnb listings, focusing on pricing, location distribution, and availability trends...</p>
+      <p><b>Italiano:</b> Questo progetto presenta un’analisi esplorativa dei dati (EDA) sugli annunci Airbnb, con particolare attenzione ai prezzi, alla distribuzione geografica e alle tendenze di disponibilità...</p>
     </div>
   </div>
 
-  <!-- Electric Cars -->
+  <!-- Cars -->
   <div class="project">
     <div class="project-image-container">
       <div class="project-title-overlay">Electric Cars EDA</div>
-      <img src="img/car.jpg" alt="Electric Cars Project" onclick="toggleDropdown('proj2')">
+      <a href="EDA_electric_cars.html" target="_blank">
+        <img src="car.jpg" alt="Electric cars project">
+      </a>
     </div>
-    <div id="proj2" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> Electric vehicles (EVs) have a fascinating history dating back to the 1800s. Although initially popular, EVs lost out to gasoline-powered cars as those became cheaper and more efficient. Today, with rising environmental concerns and advances in battery technology, EVs are making a strong comeback. This notebook explores trends and forecasts about future developments in the European EV landscape, analyzing data collected from the IEA (International Energy Agency), focusing on EV sales, stock, charging infrastructure, and regulatory incentives driving the market.</p>
-      <p><strong>Introduzione (IT):</strong> I veicoli elettrici (EV) hanno una storia affascinante che risale al 1800. Nonostante fossero inizialmente popolari, gli EV hanno perso terreno rispetto alle auto a benzina, diventate più economiche ed efficienti. Oggi, con le crescenti preoccupazioni ambientali e i progressi nella tecnologia delle batterie, gli EV stanno tornando con forza. Questo notebook esplora trend e previsioni sullo sviluppo futuro del mercato europeo degli EV, analizzando dati raccolti dall'IEA (International Energy Agency), concentrandosi su vendite, stock, infrastrutture di ricarica e incentivi normativi che guidano il mercato.</p>
-      <a href="notebooks/EDA_electric_cars.html" target="_blank">View Full Notebook</a>
-      <a href="LINK_REPO_CAR">GitHub Repository</a>
+    <div class="description">
+      <p><b>English:</b> This analysis explores the adoption and popularity of electric vehicles (EVs), investigating sales trends, market shares, and comparisons with traditional fuel vehicles...</p>
+      <p><b>Italiano:</b> Questa analisi esplora l’adozione e la popolarità dei veicoli elettrici (EV), analizzando le tendenze di vendita, le quote di mercato e il confronto con i veicoli a combustibili tradizionali...</p>
     </div>
   </div>
 
@@ -101,13 +123,13 @@
   <div class="project">
     <div class="project-image-container">
       <div class="project-title-overlay">Football EDA</div>
-      <img src="img/football.jpg" alt="Football Project" onclick="toggleDropdown('proj3')">
+      <a href="football.html" target="_blank">
+        <img src="football.jpg" alt="Football project">
+      </a>
     </div>
-    <div id="proj3" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> In recent years, football has experienced a remarkable transformation, both on and off the pitch, particularly in Europe’s top five leagues: the English Premier League (EPL), La Liga (Spain), Serie A (Italy), Bundesliga (Germany), and Ligue 1 (France). These leagues have captured global attention due to quality of play and star-studded teams, becoming economic powerhouses through broadcasting rights, sponsorships, and merchandising. Challenges include financial disparities, COVID-19 impact, and influence of wealthy owners.</p>
-      <p><strong>Introduzione (IT):</strong> Negli ultimi anni, il calcio ha vissuto una trasformazione notevole, sia in campo che fuori, soprattutto nelle prime cinque leghe europee: Premier League (Inghilterra), La Liga (Spagna), Serie A (Italia), Bundesliga (Germania) e Ligue 1 (Francia). Queste leghe hanno catturato l'attenzione globale grazie alla qualità del gioco e alle squadre di alto livello, diventando anche potenze economiche grazie a diritti televisivi, sponsorizzazioni e merchandising. Sfide: disparità finanziarie, impatto COVID-19 e influenza di proprietari ricchi.</p>
-      <a href="notebooks/football.html" target="_blank">View Full Notebook</a>
-      <a href="LINK_REPO_FOOTBALL">GitHub Repository</a>
+    <div class="description">
+      <p><b>English:</b> In recent years, football has experienced a remarkable transformation, both on and off the pitch, particularly in Europe’s top five leagues...</p>
+      <p><b>Italiano:</b> Negli ultimi anni, il calcio ha vissuto una trasformazione significativa, sia dentro che fuori dal campo, in particolare nei cinque principali campionati europei...</p>
     </div>
   </div>
 
@@ -115,38 +137,28 @@
   <div class="project">
     <div class="project-image-container">
       <div class="project-title-overlay">Spotify EDA</div>
-      <img src="img/spotify.jpg" alt="Spotify Project" onclick="toggleDropdown('proj4')">
+      <a href="spotify.html" target="_blank">
+        <img src="spotify.jpg" alt="Spotify project">
+      </a>
     </div>
-    <div id="proj4" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> This project explores the dynamics of music streaming by analyzing Spotify data to uncover what makes songs successful in the digital age. By examining audio features, genre trends, artist performance, and listener behavior, we reveal how streaming platforms shape, and are shaped by modern music consumption. The analysis focuses on three key questions: What sonic characteristics dominate streaming? How do genres and artists compete for attention? And how do seasonal and algorithmic factors influence what we listen to? Findings highlight how pop and rap dominate streams and how platform algorithms shape music consumption.</p>
-      <p><strong>Introduzione (IT):</strong> Questo progetto esplora la dinamica dello streaming musicale analizzando dati di Spotify per comprendere cosa rende una canzone di successo nell'era digitale. Analizzando caratteristiche audio, trend di genere, performance degli artisti e comportamento degli ascoltatori, si evidenzia come le piattaforme di streaming influenzino e siano influenzate dal consumo musicale moderno. L’analisi si concentra su tre domande chiave: quali caratteristiche dominano lo streaming? Come competono generi e artisti? Qual è l’influenza di fattori stagionali e algoritmici? I risultati evidenziano come pop e rap dominino gli stream e come gli algoritmi delle piattaforme modellino il consumo musicale.</p>
-      <a href="notebooks/spotify.html" target="_blank">View Full Notebook</a>
-      <a href="LINK_REPO_SPOTIFY">GitHub Repository</a>
+    <div class="description">
+      <p><b>English:</b> This project explores the dynamics of music streaming by analyzing Spotify data to uncover what makes songs successful...</p>
+      <p><b>Italiano:</b> Questo progetto esplora le dinamiche dello streaming musicale analizzando i dati di Spotify per capire cosa rende una canzone di successo...</p>
     </div>
   </div>
 
-  <!-- REIWA Figma -->
+  <!-- Reiwa -->
   <div class="project">
     <div class="project-image-container">
-      <div class="project-title-overlay">REIWA Figma</div>
-      <img src="img/reiwa.jpg" alt="REIWA Project" onclick="toggleDropdown('proj5')">
+      <div class="project-title-overlay">Reiwa Prototype</div>
+      <a href="https://www.figma.com/proto/9YlaCzZXjHrcU9QFOCD4p4/reiwa_v3f?node-id=2-2&p=f&t=upJhb05dQYO1UY3t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank">
+        <img src="reiwa.jpg" alt="Reiwa prototype">
+      </a>
     </div>
-    <div id="proj5" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> This prototype emulates an app suited for stress management. It has various features and each of them is accurately explained in the prototype.</p>
-      <p><strong>Introduzione (IT):</strong> Questo prototipo simula un'app dedicata alla gestione dello stress. Presenta diverse funzionalità, ognuna delle quali è spiegata accuratamente all'interno del prototipo.</p>
-      <a href="https://www.figma.com/proto/9YlaCzZXjHrcU9QFOCD4p4/reiwa_v3f?node-id=2-2&p=f&t=upJhb05dQYO1UY3t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank">View Prototype</a>
+    <div class="description">
+      <p><b>English:</b> This prototype emulates an app suited for stress management. It has various features and each of them is accurately explained in the prototype.</p>
+      <p><b>Italiano:</b> Questo prototipo simula un’app pensata per la gestione dello stress. Include diverse funzionalità, ognuna delle quali è spiegata nel dettaglio all’interno del prototipo.</p>
     </div>
   </div>
-
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:tuomail@gmail.com">tuomail@gmail.com</a></p>
-
-  <script>
-    function toggleDropdown(id) {
-      var content = document.getElementById(id);
-      content.style.display = (content.style.display === "block") ? "none" : "block";
-    }
-  </script>
-
 </body>
 </html>

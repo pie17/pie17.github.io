@@ -17,7 +17,6 @@
       --muted:#cfcfcf;
     }
 
-    /* Reset / base */
     *{box-sizing: border-box}
     html,body{height:100%}
     body{
@@ -32,9 +31,21 @@
 
     header{ text-align:center; margin-bottom:18px }
     h1{ font-family: 'Nunito', 'Poppins', sans-serif; font-weight:800; margin:6px 0; font-size:clamp(28px,6vw,44px); }
-    .intro{ max-width:980px; margin: 6px auto 34px; color:var(--muted); line-height:1.55; font-size:clamp(15px,2.2vw,18px); }
+    .intro{ max-width:980px; margin: 6px auto 20px; color:var(--muted); line-height:1.55; font-size:clamp(15px,2.2vw,18px); }
 
-    /* Project block */
+    .about-links{ text-align:center; margin-top:16px }
+    .about-links a{
+      color:var(--accent);
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:600;
+      border:1px solid rgba(30,144,255,0.18);
+      padding:6px 12px;
+      border-radius:6px;
+      transition: background .2s, color .2s;
+    }
+    .about-links a:hover{ background: rgba(30,144,255,0.06); color:var(--accent) }
+
     .project{
       margin:48px 0;
       padding:0;
@@ -58,20 +69,19 @@
       object-fit:cover;
       transform:translateZ(0);
       transition: transform .35s ease, filter .35s ease, box-shadow .35s ease;
-      filter: contrast(1.05) brightness(1.02);
+      filter: contrast(1.08) brightness(1.04) saturate(1.03);
       -webkit-backface-visibility:hidden;
       z-index:1;
       position:relative;
     }
 
-    /* hover effect / subtle 'grana' via contrast/brightness */
+    /* hover + grana più visibile */
     .project-image-container:hover img{
       transform: scale(1.035);
       box-shadow: 0 18px 45px rgba(0,0,0,0.6);
-      filter: brightness(1.08) contrast(1.08);
+      filter: brightness(1.1) contrast(1.12) saturate(1.06) grayscale(0.02);
     }
 
-    /* Overlay title (no box) */
     .project-title-overlay{
       position:absolute;
       top:18px;
@@ -80,22 +90,20 @@
       z-index:3;
       font-family: 'Nunito', sans-serif;
       font-weight:800;
-      font-size: clamp(20px,5.2vw,48px);
+      font-size: clamp(24px,5vw,52px);
       color:#ffffff;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
       text-shadow: 0 6px 18px rgba(0,0,0,0.75);
-      pointer-events: none; /* allow clicks on the image/link */
+      pointer-events: none;
       background: transparent;
-      padding: 0 6px;
-      line-height:1;
+      padding: 0 8px;
+      line-height:1.1;
     }
 
-    /* Small upward movement on hover for the title */
     .project-image-container:hover .project-title-overlay{
       transform: translateX(-50%) translateY(-6px);
     }
 
-    /* Descriptions */
     .description{
       max-width:1000px;
       margin:18px auto 0;
@@ -107,7 +115,6 @@
     }
     .description p{ margin:12px 0; }
 
-    /* Notebook link */
     .link-row{
       margin-top:8px;
       display:flex;
@@ -128,11 +135,10 @@
     }
     .btn:hover{ background: rgba(30,144,255,0.06); color:var(--accent) }
 
-    /* responsive smaller images on small screens */
     @media (max-width:640px){
       .project-image-container img{ height:36vh; }
       .description{ font-size:15px; padding:8px; }
-      .project-title-overlay{ top:12px; font-size: clamp(18px,7vw,34px) }
+      .project-title-overlay{ top:12px; font-size: clamp(20px,7vw,36px) }
       main{ padding:18px 12px }
     }
   </style>
@@ -145,120 +151,94 @@
         <p><strong>English:</strong> I am a Digital Management student at H-Farm. After one of my courses I decided to deepen my interest in data by learning on my own; I then worked on several projects to practice data collection, cleaning, visualization and interpretation.</p>
         <p><strong>Italiano:</strong> Sono uno studente di Digital Management ad H-Farm. Dopo uno dei corsi ho deciso di approfondire autonomamente il mondo dei dati; ho quindi realizzato diversi progetti per esercitarmi nella raccolta, pulizia, visualizzazione e interpretazione dei dati.</p>
       </div>
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/pietro-tegon-1bb14b23a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="CV.pdf" download>Download CV</a>
+      </div>
     </header>
 
     <!-- AIRBNB -->
-    <section class="project" id="airbnb">
+    <section class="project">
       <div class="project-image-container">
         <a href="notebooks/EDA_airbnb.html" target="_blank" rel="noopener">
           <img src="img/airbnb.jpg" alt="Airbnb EDA — Pietro Tegon">
         </a>
         <div class="project-title-overlay">Airbnb EDA</div>
       </div>
-
       <div class="description">
-        <p><strong>English:</strong> Airbnb, founded in 2008, has rapidly transformed the landscape of global travel and accommodation. As an online marketplace, it connects hosts offering unique lodging spaces with travelers seeking alternatives to traditional hotels. By leveraging technology, Airbnb has enabled millions of people to monetize their homes and share their local cultures with guests from around the world. This innovative model not only provides travelers with a variety of lodging options, ranging from budget-friendly rooms to luxury villas, but also fosters a more authentic travel experience by immersing guests in local communities. This project examines the influence and use of Airbnb in three major cities across three different continents: Paris, Tokyo, and New York. Each city presents a unique cultural and social landscape, demonstrating how Airbnb adapts to diverse environments.</p>
-
-        <p><strong>English (cont.):</strong> In Paris, the romantic and historic ambiance of the city is reflected in the variety of accommodations offered, allowing travelers to experience the city’s charm from within its neighborhoods. Tokyo, a city that blends the ultramodern with the traditional, provides a different dynamic, where Airbnb enables visitors to enjoy a local experience amidst the city’s fast-paced environment. New York City, known for its cultural diversity and vibrant urban life, showcases Airbnb’s ability to cater to a wide range of tastes and preferences, offering everything from trendy apartments in Manhattan to cozy spaces in Brooklyn.</p>
-
-        <p><strong>English (conclusion):</strong> This project examines the differences in Airbnb stays in these three cities, which can range from price to type of stay to the differences between neighborhoods within each city. Additionally, each city's Airbnbs will be examined on their own, to better understand trends, internal differences between neighborhoods and correlations between price and other variables.</p>
-
-        <p><strong>Italiano:</strong> Airbnb, fondata nel 2008, ha rapidamente trasformato il panorama dei viaggi globali e dell'ospitalità. Come marketplace online, collega host che offrono alloggi unici con viaggiatori in cerca di alternative agli hotel tradizionali. Questo progetto analizza l'uso e l'influenza di Airbnb in tre grandi città di tre continenti: Parigi, Tokyo e New York. Ogni città presenta un paesaggio culturale e sociale unico, mostrando come Airbnb si adatti a diversi ambienti. A Parigi l'atmosfera romantica e storica si riflette nella varietà di alloggi offerti. Tokyo offre un'esperienza locale in un contesto frenetico. New York mostra la capacità di Airbnb di soddisfare gusti e preferenze diversi. Il progetto esamina differenze nei soggiorni Airbnb, inclusi prezzo, tipo di alloggio e tendenze dei quartieri.</p>
-
-        <div class="link-row">
-          <a class="btn" href="notebooks/EDA_airbnb.html" target="_blank" rel="noopener">View full notebook</a>
-        </div>
+        <p><strong>English:</strong>Airbnb, founded in 2008, has transformed the travel industry by connecting hosts with travelers seeking alternatives to traditional hotels. This project analyzes Airbnb’s use and impact in Paris, Tokyo, and New York, showing how the platform adapts to different cultural and social contexts. Differences in price, type of stay, and neighborhood trends are explored to understand local dynamics. </p>
+        <p><strong>Italiano:</strong> Airbnb, fondata nel 2008, ha rivoluzionato il settore dei viaggi collegando host e viaggiatori in cerca di alternative agli hotel tradizionali. Il progetto analizza l’uso e l’influenza di Airbnb a Parigi, Tokyo e New York, mostrando come la piattaforma si adatti a contesti culturali e sociali diversi. Vengono esplorati differenze di prezzo, tipo di soggiorno e trend dei quartieri per comprendere le dinamiche locali.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="notebooks/EDA_airbnb.html" target="_blank" rel="noopener">View full notebook</a>
       </div>
     </section>
 
     <!-- ELECTRIC CARS -->
-    <section class="project" id="cars">
+    <section class="project">
       <div class="project-image-container">
         <a href="notebooks/EDA_electric_cars.html" target="_blank" rel="noopener">
           <img src="img/car.jpg" alt="Electric Cars EDA — Pietro Tegon">
         </a>
         <div class="project-title-overlay">Electric Cars EDA</div>
       </div>
-
       <div class="description">
-        <p><strong>English:</strong> Electric vehicles (EVs) have a fascinating history that stretches back to the 1800s. In Europe, early inventors like Hungary’s Ányos Jedlik, who made one of the first electric motors in 1828, and England’s Thomas Parker, who built practical electric cars in the 1880s, were key players in getting the EV ball rolling. Although EVs were initially popular, they lost out to gasoline-powered cars as those became cheaper and more efficient, thanks largely to Henry Ford’s assembly line. Fast forward to today, and the scene has changed dramatically. With rising environmental concerns and significant advances in battery technology, EVs are making a strong comeback.</p>
-
-        <p><strong>English (cont.):</strong> This surge is powered by strict emissions regulations and substantial government incentives, all aimed at promoting greener transportation options. Initially driven by early adopters and environmental policies, the EV market has rapidly expanded, especially in Europe, boosted by advancements in technology, increasing consumer awareness, and robust governmental incentives. Countries such as Germany, France, and the Netherlands have led the charge, contributing to a substantial rise in EV sales and stock. Infrastructure development, particularly charging points, has further facilitated this growth.</p>
-
-        <p><strong>English (conclusion):</strong> As the industry evolves, the focus is shifting towards improving EV stock share, optimizing the ratio of EVs to charging points, and sustaining the momentum of sales growth. The European Union has set a very ambitious objective in this direction: zero CO2 emissions for new passenger cars and light commercial vehicles in 2035. This notebook explores trends and forecasts about future developments in the European EV landscape by analyzing data collected from the IEA (International Energy Agency).</p>
-
-        <p><strong>Italiano:</strong> I veicoli elettrici (EV) hanno una storia affascinante che risale al 1800. In Europa, pionieri come Ányos Jedlik e Thomas Parker furono fondamentali per lo sviluppo dei primi motori elettrici e delle prime vetture elettriche pratiche. Nonostante la popolarità iniziale, gli EV persero terreno rispetto alle auto a benzina con l'affermazione dei modelli di produzione di massa. Oggi, con le crescenti preoccupazioni ambientali e gli avanzamenti nelle batterie, gli EV stanno vivendo una forte ripresa. Questo notebook esplora trend e previsioni per il mercato europeo degli EV, analizzando vendite, stock, infrastrutture di ricarica e incentivi normativi.</p>
-
-        <div class="link-row">
-          <a class="btn" href="notebooks/EDA_electric_cars.html" target="_blank" rel="noopener">View full notebook</a>
-        </div>
+        <p><strong>English:</strong> Electric vehicles have a history dating back to the 1800s and are experiencing a strong comeback today due to incentives and technology. This project explores trends and forecasts in the European EV market, analyzing sales, stock, charging infrastructure, and government incentives. It highlights how EV adoption is influenced by regulations, investments, and changes in consumer demand.</p>
+        <p><strong>Italiano:</strong> I veicoli elettrici hanno una storia che risale al 1800 e oggi stanno vivendo una forte ripresa grazie a incentivi e tecnologia. Questo progetto esplora trend e previsioni del mercato europeo, analizzando vendite, stock, infrastrutture di ricarica e incentivi governativi. Viene evidenziato come la diffusione degli EV sia influenzata da regolamentazioni, investimenti e cambiamenti nella domanda dei consumatori.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="notebooks/EDA_electric_cars.html" target="_blank" rel="noopener">View full notebook</a>
       </div>
     </section>
 
     <!-- FOOTBALL -->
-    <section class="project" id="football">
+    <section class="project">
       <div class="project-image-container">
         <a href="notebooks/football.html" target="_blank" rel="noopener">
           <img src="img/football.jpg" alt="Football EDA — Pietro Tegon">
         </a>
         <div class="project-title-overlay">Football EDA</div>
       </div>
-
       <div class="description">
-        <p><strong>English:</strong> In recent years, football has experienced a remarkable transformation, both on and off the pitch, particularly in Europe’s top five leagues: the English Premier League (EPL), La Liga (Spain), Serie A (Italy), Bundesliga (Germany), and Ligue 1 (France). These leagues have not only captured global attention due to the quality of play and star-studded teams but have also become economic powerhouses, driving significant revenue through broadcasting rights, sponsorships, and merchandising.</p>
-
-        <p><strong>English (cont.):</strong> The Premier League, for instance, has consistently led the way in revenue generation, largely due to lucrative television deals and its broad international fan base. Meanwhile, La Liga has showcased its unique brand of football, highlighted by the success of clubs like FC Barcelona and Real Madrid, which have global appeal. Serie A, after a period of decline, has seen a resurgence with increased investment and the return of top-tier talent. The Bundesliga, known for its fan-friendly policies and financial prudence, continues to produce competitive teams and nurture young talent. Ligue 1, although traditionally seen as a feeder league, has gained prominence with clubs like Paris Saint-Germain making substantial investments to bring in world-class players.</p>
-
-        <p><strong>English (conclusion):</strong> However, these leagues also face challenges, including financial disparities among clubs, the impact of the COVID-19 pandemic on matchday revenues, and the growing influence of wealthy owners. As football continues to globalize, these top leagues strive to balance sporting excellence with sustainable economic models, ensuring the long-term health of the sport.</p>
-
-        <p><strong>Italiano:</strong> Negli ultimi anni, il calcio ha vissuto una trasformazione notevole, sia in campo che fuori, soprattutto nelle prime cinque leghe europee: Premier League, La Liga, Serie A, Bundesliga e Ligue 1. Queste leghe hanno attirato attenzione globale non solo per la qualità del gioco ma anche per l'impatto economico generato da diritti TV, sponsorizzazioni e merchandising. Sfide ricorrenti includono disparità finanziarie tra club, effetti della pandemia sulle entrate da matchday e l'influenza crescente di proprietari molto ricchi.</p>
-
-        <div class="link-row">
-          <a class="btn" href="notebooks/football.html" target="_blank" rel="noopener">View full notebook</a>
-        </div>
+        <p><strong>English:</strong> Football has undergone significant changes in Europe’s top five leagues in recent years. This project analyzes the Premier League, La Liga, Serie A, Bundesliga, and Ligue 1, considering both sporting and economic aspects. Differences between clubs, investments, talent returns, and the impact of events like the pandemic are highlighted.</p>
+        <p><strong>Italiano:</strong> Negli ultimi anni il calcio ha subito una trasformazione significativa nelle prime cinque leghe europee. Il progetto analizza Premier League, La Liga, Serie A, Bundesliga e Ligue 1, considerando sia l’aspetto sportivo sia quello economico. Vengono evidenziate differenze tra club, investimenti, ritorno di talenti e impatti di eventi come la pandemia.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="notebooks/football.html" target="_blank" rel="noopener">View full notebook</a>
       </div>
     </section>
 
     <!-- SPOTIFY -->
-    <section class="project" id="spotify">
+    <section class="project">
       <div class="project-image-container">
         <a href="notebooks/spotify.html" target="_blank" rel="noopener">
           <img src="img/spotify.jpg" alt="Spotify EDA — Pietro Tegon">
         </a>
         <div class="project-title-overlay">Spotify EDA</div>
       </div>
-
       <div class="description">
-        <p><strong>English:</strong> This project explores the dynamics of music streaming by analyzing Spotify data to uncover what makes songs successful in the digital age. By examining audio features, genre trends, artist performance, and listener behavior, we reveal how streaming platforms shape, and are shaped by modern music consumption. The analysis focuses on three key questions: What sonic characteristics dominate streaming? How do genres and artists compete for attention? And how do seasonal and algorithmic factors influence what we listen to?</p>
-
-        <p><strong>English (cont.):</strong> The data reveals clear patterns: pop and rap lead in streams, driven by high energy, danceability, and short runtimes optimized for playlists. Latin music and R&B emerge as strong seasonal contenders, while rock and EDM underperform despite their cultural presence. At the artist level, figures like Post Malone, Ed Sheeran, and Bad Bunny dominate by blending genre appeal with platform-friendly formulas, yet even their success fluctuates month-to-month, reflecting streaming’s fast-paced cycles.</p>
-
-        <p><strong>English (conclusion):</strong> Beyond raw numbers, this project highlights the tension between artistic expression and algorithmic logic. Songs classified as "happy" or "angry" thrive, while "chill" tracks struggle, not necessarily due to listener preference alone, but because of how platforms prioritize engagement. The findings suggest that streaming doesn’t just reflect taste; it actively shapes it, creating a feedback loop where data-driven trends influence future production.</p>
-
-        <p><strong>Italiano:</strong> Questo progetto esplora la dinamica dello streaming musicale analizzando dati di Spotify per comprendere cosa rende una canzone di successo nell'era digitale. Analizzando caratteristiche audio, trend di genere, performance degli artisti e comportamento degli ascoltatori, emerge come pop e rap dominino gli stream grazie a caratteristiche come energia, danceability e durate ottimizzate per le playlist. Vengono inoltre esplorati fattori stagionali e l'impatto degli algoritmi sulla visibilità dei brani.</p>
-
-        <div class="link-row">
-          <a class="btn" href="notebooks/spotify.html" target="_blank" rel="noopener">View full notebook</a>
-        </div>
+        <p><strong>English:</strong> This project analyzes music streaming on Spotify to understand what makes songs successful. Audio features, genre trends, artist performance, and listener behavior are considered. The analysis shows how algorithms, seasonality, and preferences influence song popularity and listening patterns.</p>
+        <p><strong>Italiano:</strong> Questo progetto analizza lo streaming musicale su Spotify per capire cosa rende le canzoni di successo. Vengono considerati caratteristiche audio, trend di genere, performance degli artisti e comportamento degli ascoltatori. L’analisi mostra come algoritmi, stagionalità e preferenze influenzino la popolarità dei brani e i pattern di ascolto.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="notebooks/spotify.html" target="_blank" rel="noopener">View full notebook</a>
       </div>
     </section>
 
-    <!-- REIWA (Figma) -->
-    <section class="project" id="reiwa">
+    <!-- REIWA -->
+    <section class="project">
       <div class="project-image-container">
         <a href="https://www.figma.com/proto/9YlaCzZXjHrcU9QFOCD4p4/reiwa_v3f?node-id=2-2&p=f&t=upJhb05dQYO1UY3t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank" rel="noopener">
           <img src="img/reiwa.jpg" alt="REIWA Figma prototype — Pietro Tegon">
         </a>
         <div class="project-title-overlay">REIWA Prototype</div>
       </div>
-
       <div class="description">
-        <p><strong>English:</strong> This prototype emulates an app suited for stress management. It has various features and each of them is accurately explained in the prototype.</p>
-        <p><strong>Italiano:</strong> Questo prototipo simula un'app pensata per la gestione dello stress. Presenta diverse funzionalità, ognuna delle quali è spiegata accuratamente all'interno del prototipo.</p>
-
-        <div class="link-row">
-          <a class="btn" href="https://www.figma.com/proto/9YlaCzZXjHrcU9QFOCD4p4/reiwa_v3f?node-id=2-2&p=f&t=upJhb05dQYO1UY3t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank" rel="noopener">View prototype</a>
-        </div>
+        <p><strong>English:</strong> The prototype simulates a stress management app, with various features clearly explained. It shows how users can monitor, manage, and improve their well-being. The project highlights the design, interaction, and workflow of the main functionalities.</p>
+        <p><strong>Italiano:</strong> Il prototipo simula un’app per la gestione dello stress, con diverse funzionalità illustrate in dettaglio. Permette di comprendere come l’utente possa monitorare, gestire e migliorare il proprio benessere. Il progetto evidenzia design, interazione e flusso delle principali feature.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="https://www.figma.com/proto/9YlaCzZXjHrcU9QFOCD4p4/reiwa_v3f?node-id=2-2&p=f&t=upJhb05dQYO1UY3t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank" rel="noopener">View prototype</a>
       </div>
     </section>
 

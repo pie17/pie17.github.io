@@ -14,6 +14,7 @@
     }
     h1, h2 { color: #f0f0f0; }
     .project { margin: 40px 0; }
+    .project-title { font-weight: bold; font-size: 1.3em; margin-bottom: 10px; }
     .dropdown-content {
       display: none; 
       margin-top: 15px; 
@@ -27,8 +28,8 @@
       margin-right: auto;
     }
     img { 
-      width: 90vw; 
-      max-height: 70vh; 
+      width: 70vw; 
+      max-height: 60vh; 
       object-fit: cover; 
       cursor: pointer; 
       border-radius: 10px; 
@@ -52,21 +53,11 @@
 
   <h2>Portfolio</h2>
 
-  <!-- Project 1: Netflix -->
+  <!-- Airbnb -->
   <div class="project">
-    <img src="img/netflix.jpg" alt="Netflix Project" onclick="toggleDropdown('proj1')">
+    <div class="project-title">Airbnb EDA</div>
+    <img src="img/airbnb.jpg" alt="Airbnb Project" onclick="toggleDropdown('proj1')">
     <div id="proj1" class="dropdown-content">
-      <p><strong>Introduction (EN):</strong> In this project, I aim to analyze the characteristics and patterns within Netflix's extensive catalog of movies and TV series to uncover key trends and insights. By examining various metrics such as ratings, hours viewed, genres, networks, and release years, I explore the factors contributing to content success on the platform. Through visualizations and data-driven insights, I investigate the relationship between popularity and quality, the diversity of genres, and the impact of runtime and episode counts on ratings. These findings offer actionable recommendations for Netflix and content creators to optimize their offerings and cater to diverse audience preferences in a competitive streaming market.</p>
-      <p><strong>Introduzione (IT):</strong> In questo progetto, l'obiettivo è analizzare le caratteristiche e i pattern del vasto catalogo di Netflix per scoprire trend e insight chiave. Esaminando metriche come rating, ore visualizzate, generi, network e anni di uscita, si analizzano i fattori che contribuiscono al successo dei contenuti. Visualizzazioni e insight data-driven aiutano a comprendere la relazione tra popolarità e qualità, la diversità dei generi e l'impatto della durata e del numero di episodi sui rating. Questi risultati offrono raccomandazioni concrete a Netflix e ai content creators per ottimizzare le offerte e soddisfare le preferenze di un pubblico variegato.</p>
-      <a href="notebooks/EDA_netflix.html" target="_blank">View Full Notebook</a>
-      <a href="LINK_REPO_NETFLIX">GitHub Repository</a>
-    </div>
-  </div>
-
-  <!-- Project 2: Airbnb -->
-  <div class="project">
-    <img src="img/airbnb.jpg" alt="Airbnb Project" onclick="toggleDropdown('proj2')">
-    <div id="proj2" class="dropdown-content">
       <p><strong>Introduction (EN):</strong> Airbnb, founded in 2008, has rapidly transformed the landscape of global travel and accommodation. As an online marketplace, it connects hosts offering unique lodging spaces with travelers seeking alternatives to traditional hotels. This project examines the influence and use of Airbnb in three major cities across three different continents: Paris, Tokyo, and New York. Each city presents a unique cultural and social landscape, demonstrating how Airbnb adapts to diverse environments. In Paris, the romantic and historic ambiance is reflected in the variety of accommodations offered. Tokyo provides a local experience amidst a fast-paced environment. New York showcases Airbnb’s ability to cater to a wide range of tastes and preferences. This project examines differences in Airbnb stays, including price, type of stay, and neighborhood trends.</p>
       <p><strong>Introduzione (IT):</strong> Airbnb, fondata nel 2008, ha rapidamente trasformato il panorama dei viaggi globali e dell'ospitalità. Come marketplace online, collega host che offrono alloggi unici con viaggiatori in cerca di alternative agli hotel tradizionali. Questo progetto analizza l'uso e l'influenza di Airbnb in tre grandi città di tre continenti: Parigi, Tokyo e New York. Ogni città presenta un paesaggio culturale e sociale unico, mostrando come Airbnb si adatti a diversi ambienti. A Parigi, l'atmosfera romantica e storica si riflette nella varietà di alloggi offerti. Tokyo offre un'esperienza locale in un contesto frenetico. New York mostra la capacità di Airbnb di soddisfare gusti e preferenze diversi. Questo progetto esamina differenze nei soggiorni Airbnb, inclusi prezzo, tipo di alloggio e tendenze dei quartieri.</p>
       <a href="notebooks/EDA_airbnb.html" target="_blank">View Full Notebook</a>
@@ -74,14 +65,39 @@
     </div>
   </div>
 
-  <!-- Project 3: Electric Cars -->
+  <!-- Electric Cars -->
   <div class="project">
-    <img src="img/car.jpg" alt="Electric Cars Project" onclick="toggleDropdown('proj3')">
-    <div id="proj3" class="dropdown-content">
+    <div class="project-title">Electric Cars EDA</div>
+    <img src="img/car.jpg" alt="Electric Cars Project" onclick="toggleDropdown('proj2')">
+    <div id="proj2" class="dropdown-content">
       <p><strong>Introduction (EN):</strong> Electric vehicles (EVs) have a fascinating history dating back to the 1800s. Although initially popular, EVs lost out to gasoline-powered cars as those became cheaper and more efficient. Today, with rising environmental concerns and advances in battery technology, EVs are making a strong comeback. This notebook explores trends and forecasts about future developments in the European EV landscape, analyzing data collected from the IEA (International Energy Agency), focusing on EV sales, stock, charging infrastructure, and regulatory incentives driving the market.</p>
       <p><strong>Introduzione (IT):</strong> I veicoli elettrici (EV) hanno una storia affascinante che risale al 1800. Nonostante fossero inizialmente popolari, gli EV hanno perso terreno rispetto alle auto a benzina, diventate più economiche ed efficienti. Oggi, con le crescenti preoccupazioni ambientali e i progressi nella tecnologia delle batterie, gli EV stanno tornando con forza. Questo notebook esplora trend e previsioni sullo sviluppo futuro del mercato europeo degli EV, analizzando dati raccolti dall'IEA (International Energy Agency), concentrandosi su vendite, stock, infrastrutture di ricarica e incentivi normativi che guidano il mercato.</p>
       <a href="notebooks/EDA_electric_cars.html" target="_blank">View Full Notebook</a>
       <a href="LINK_REPO_CAR">GitHub Repository</a>
+    </div>
+  </div>
+
+  <!-- Football -->
+  <div class="project">
+    <div class="project-title">Football EDA</div>
+    <img src="img/football.jpg" alt="Football Project" onclick="toggleDropdown('proj3')">
+    <div id="proj3" class="dropdown-content">
+      <p><strong>Introduction (EN):</strong> In recent years, football has experienced a remarkable transformation, both on and off the pitch, particularly in Europe’s top five leagues: the English Premier League (EPL), La Liga (Spain), Serie A (Italy), Bundesliga (Germany), and Ligue 1 (France). These leagues have captured global attention due to quality of play and star-studded teams, becoming economic powerhouses through broadcasting rights, sponsorships, and merchandising. Challenges include financial disparities, COVID-19 impact, and influence of wealthy owners.</p>
+      <p><strong>Introduzione (IT):</strong> Negli ultimi anni, il calcio ha vissuto una trasformazione notevole, sia in campo che fuori, soprattutto nelle prime cinque leghe europee: Premier League (Inghilterra), La Liga (Spagna), Serie A (Italia), Bundesliga (Germania) e Ligue 1 (Francia). Queste leghe hanno catturato l'attenzione globale grazie alla qualità del gioco e alle squadre di alto livello, diventando anche potenze economiche grazie a diritti televisivi, sponsorizzazioni e merchandising. Sfide: disparità finanziarie, impatto COVID-19 e influenza di proprietari ricchi.</p>
+      <a href="notebooks/football.html" target="_blank">View Full Notebook</a>
+      <a href="LINK_REPO_FOOTBALL">GitHub Repository</a>
+    </div>
+  </div>
+
+  <!-- Spotify -->
+  <div class="project">
+    <div class="project-title">Spotify EDA</div>
+    <img src="img/spotify.jpg" alt="Spotify Project" onclick="toggleDropdown('proj4')">
+    <div id="proj4" class="dropdown-content">
+      <p><strong>Introduction (EN):</strong> This project explores the dynamics of music streaming by analyzing Spotify data to uncover what makes songs successful in the digital age. By examining audio features, genre trends, artist performance, and listener behavior, we reveal how streaming platforms shape, and are shaped by modern music consumption. The analysis focuses on three key questions: What sonic characteristics dominate streaming? How do genres and artists compete for attention? And how do seasonal and algorithmic factors influence what we listen to? Findings highlight how pop and rap dominate streams and how platform algorithms shape music consumption.</p>
+      <p><strong>Introduzione (IT):</strong> Questo progetto esplora la dinamica dello streaming musicale analizzando dati di Spotify per comprendere cosa rende una canzone di successo nell'era digitale. Analizzando caratteristiche audio, trend di genere, performance degli artisti e comportamento degli ascoltatori, si evidenzia come le piattaforme di streaming influenzino e siano influenzate dal consumo musicale moderno. L’analisi si concentra su tre domande chiave: quali caratteristiche dominano lo streaming? Come competono generi e artisti? Qual è l’influenza di fattori stagionali e algoritmici? I risultati evidenziano come pop e rap dominino gli stream e come gli algoritmi delle piattaforme modellino il consumo musicale.</p>
+      <a href="notebooks/spotify.html" target="_blank">View Full Notebook</a>
+      <a href="LINK_REPO_SPOTIFY">GitHub Repository</a>
     </div>
   </div>
 
@@ -94,5 +110,6 @@
       content.style.display = (content.style.display === "block") ? "none" : "block";
     }
   </script>
+
 </body>
 </html>

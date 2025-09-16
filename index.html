@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pietro Tegon — Portfolio</title>
 
-  <!-- Fonts: Montserrat for titles, Poppins for body -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fonts: Lato for titles, Poppins for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -30,7 +30,13 @@
     main{max-width:1200px;margin:0 auto;padding:28px}
 
     header{ text-align:center; margin-bottom:18px }
-    h1{ font-family: 'Montserrat', sans-serif; font-weight:800; text-transform:uppercase; margin:6px 0; font-size:clamp(28px,6vw,44px); }
+    h1{ 
+      font-family: 'Lato', sans-serif; 
+      font-weight:900; 
+      text-transform:uppercase; 
+      margin:6px 0; 
+      font-size:clamp(32px,6vw,52px); 
+    }
 
     /* Accordion About Me */
     .accordion {
@@ -42,8 +48,8 @@
       background: var(--panel);
     }
     .accordion-header {
-      font-family: 'Montserrat', sans-serif;
-      font-weight:800;
+      font-family: 'Lato', sans-serif;
+      font-weight:900;
       text-transform:uppercase;
       padding: 12px 16px;
       cursor: pointer;
@@ -104,16 +110,14 @@
       height:48vh;
       max-height:650px;
       object-fit:cover;
-      object-position:center;
       transform:translateZ(0);
       transition: transform .35s ease, filter .35s ease, box-shadow .35s ease;
-      filter: brightness(0.65) contrast(1.08) saturate(1.05);
+      filter: contrast(1.08) brightness(0.65) saturate(1.03);
       -webkit-backface-visibility:hidden;
       z-index:1;
       position:relative;
     }
-
-    /* Football image aligned to top */
+    /* Football più centrata in alto */
     .project-image-container img[alt*="Football"] {
       object-position: top center;
     }
@@ -121,7 +125,7 @@
     .project-image-container:hover img{
       transform: scale(1.035);
       box-shadow: 0 18px 45px rgba(0,0,0,0.6);
-      filter: brightness(0.75) contrast(1.12) saturate(1.1);
+      filter: brightness(1.1) contrast(1.12) saturate(1.06) grayscale(0.02);
     }
 
     .project-title-overlay{
@@ -130,20 +134,18 @@
       left:50%;
       transform:translate(-50%, -50%);
       z-index:3;
-      font-family: 'Montserrat', sans-serif;
-      font-weight:800;
+      font-family: 'Lato', sans-serif;
+      font-weight:900;
       text-transform:uppercase;
-      font-size: clamp(24px,5vw,52px);
+      font-size: clamp(36px,7.5vw,78px); /* ingrandito 1.5x */
       color:#ffffff;
       letter-spacing: 1px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.75);
       pointer-events: none;
-      padding: 6px 14px;
-      line-height:1.2;
+      padding: 0 8px;
+      line-height:1.1;
       text-align:center;
-      background: rgba(15,15,16,0.45); /* vetro satinato */
-      backdrop-filter: blur(6px);
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+      background: transparent; /* niente vetro satinato */
     }
 
     .project-image-container:hover .project-title-overlay{
@@ -184,7 +186,7 @@
     @media (max-width:640px){
       .project-image-container img{ height:36vh; }
       .description{ font-size:15px; padding:8px; }
-      .project-title-overlay{ font-size: clamp(20px,7vw,36px) }
+      .project-title-overlay{ font-size: clamp(28px,9vw,52px) }
       main{ padding:18px 12px }
       .accordion { width: 90%; }
     }
@@ -193,7 +195,7 @@
 <body>
   <main>
     <header>
-      <h1>Pietro Tegon</h1>
+      <h1>Pietro Tegon — Portfolio</h1>
 
       <!-- Accordion About Me -->
       <div class="accordion">
@@ -203,7 +205,7 @@
           <p><strong>Italiano:</strong> Sono uno studente di Digital Management ad H-Farm. Dopo uno dei corsi ho deciso di approfondire autonomamente il mondo dei dati; ho quindi realizzato diversi progetti per esercitarmi nella raccolta, pulizia, visualizzazione e interpretazione dei dati.</p>
           <div class="about-links">
             <a href="https://www.linkedin.com/in/pietro-tegon-1bb14b23a/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="CV.pdf" download>Download CV</a>
+            <a href="CV_pietro_tegon.pdf" download>Download CV</a>
           </div>
         </div>
       </div>

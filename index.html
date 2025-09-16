@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Tuo Nome</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
+    h1, h2 { color: #333; }
+    .dropdown { margin: 15px 0; }
+    .dropdown button {
+      background-color: #007BFF; color: white; padding: 10px 20px;
+      border: none; cursor: pointer; border-radius: 5px;
+    }
+    .dropdown-content {
+      display: none; margin-top: 10px; padding: 15px;
+      background: white; border: 1px solid #ccc; border-radius: 5px;
+    }
+    .project { margin-bottom: 15px; }
+    img { max-width: 400px; display: block; margin-bottom: 10px; }
+    a { color: #007BFF; text-decoration: none; margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Tuo Nome</h1>
+  <p>Data enthusiast con progetti in analisi e design.</p>
+  <a href="LINK_LINKEDIN">LinkedIn</a> | 
+  <a href="LINK_GITHUB">GitHub</a> | 
+  <a href="CV.pdf">Scarica CV</a>
+
+  <h2>Portfolio</h2>
+
+  <div class="dropdown">
+    <button onclick="toggleDropdown('data')">📊 Data Projects</button>
+    <div id="data" class="dropdown-content">
+      <div class="project">
+        <h3>Progetto 1</h3>
+        <img src="img/progetto1.png" alt="preview progetto 1">
+        <a href="LINK_NBVIEWER">Visualizza Notebook</a>
+        <a href="LINK_REPO">Codice su GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Progetto 2</h3>
+        <img src="img/progetto2.png" alt="preview progetto 2">
+        <a href="LINK_NBVIEWER">Visualizza Notebook</a>
+        <a href="LINK_REPO">Codice su GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="toggleDropdown('design')">🎨 Design Project</button>
+    <div id="design" class="dropdown-content">
+      <div class="project">
+        <h3>UI con Figma</h3>
+        <iframe style="border:1px solid #ccc; border-radius: 5px;" 
+                width="600" height="400" 
+                src="LINK_FIGMA_EMBED"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <h2>Contatti</h2>
+  <p>Email: <a href="mailto:tuomail@gmail.com">tuomail@gmail.com</a></p>
+
+  <script>
+    function toggleDropdown(id) {
+      var content = document.getElementById(id);
+      content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

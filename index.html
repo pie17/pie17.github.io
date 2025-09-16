@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Tuo Nome</title>
+  <title>Portfolio - Pietro Tegon</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
-    h1, h2 { color: #333; }
-    .dropdown { margin: 15px 0; }
-    .dropdown button {
-      background-color: #007BFF; color: white; padding: 10px 20px;
-      border: none; cursor: pointer; border-radius: 5px;
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 40px; 
+      background-color: #121212; 
+      color: #f0f0f0; 
+      text-align: center; 
     }
+    h1, h2 { color: #f0f0f0; }
+    .project { margin: 20px 0; }
     .dropdown-content {
-      display: none; margin-top: 10px; padding: 15px;
-      background: white; border: 1px solid #ccc; border-radius: 5px;
+      display: none; 
+      margin-top: 10px; 
+      padding: 15px;
+      background: #1e1e1e; 
+      border: 1px solid #333; 
+      border-radius: 5px; 
     }
-    .project { margin-bottom: 15px; }
-    img { max-width: 400px; display: block; margin-bottom: 10px; }
-    a { color: #007BFF; text-decoration: none; margin-right: 10px; }
+    img { max-width: 300px; cursor: pointer; border-radius: 10px; }
+    a { color: #1E90FF; text-decoration: none; margin-right: 10px; }
   </style>
 </head>
 <body>
-  <h1>Tuo Nome</h1>
+
+  <h1>Pietro Tegon</h1>
   <p>Data enthusiast con progetti in analisi e design.</p>
   <a href="LINK_LINKEDIN">LinkedIn</a> | 
   <a href="LINK_GITHUB">GitHub</a> | 
@@ -30,33 +36,43 @@
 
   <h2>Portfolio</h2>
 
-  <div class="dropdown">
-    <button onclick="toggleDropdown('data')">📊 Data Projects</button>
-    <div id="data" class="dropdown-content">
-      <div class="project">
-        <h3>Progetto 1</h3>
-        <img src="img/progetto1.png" alt="preview progetto 1">
-        <a href="LINK_NBVIEWER">Visualizza Notebook</a>
-        <a href="LINK_REPO">Codice su GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Progetto 2</h3>
-        <img src="img/progetto2.png" alt="preview progetto 2">
-        <a href="LINK_NBVIEWER">Visualizza Notebook</a>
-        <a href="LINK_REPO">Codice su GitHub</a>
-      </div>
+  <!-- Progetto 1 -->
+  <div class="project">
+    <img src="img/tesla.png" alt="Progetto Macchine Elettriche" onclick="toggleDropdown('proj1')">
+    <div id="proj1" class="dropdown-content">
+      <p>Analisi dati sulle vendite di macchine elettriche e trend di mercato.</p>
+      <a href="LINK_NBVIEWER">Visualizza Notebook</a>
+      <a href="LINK_REPO">Codice su GitHub</a>
     </div>
   </div>
 
-  <div class="dropdown">
-    <button onclick="toggleDropdown('design')">🎨 Design Project</button>
-    <div id="design" class="dropdown-content">
-      <div class="project">
-        <h3>UI con Figma</h3>
-        <iframe style="border:1px solid #ccc; border-radius: 5px;" 
-                width="600" height="400" 
-                src="LINK_FIGMA_EMBED"></iframe>
-      </div>
+  <!-- Progetto 2 -->
+  <div class="project">
+    <img src="img/progetto2.png" alt="Progetto 2" onclick="toggleDropdown('proj2')">
+    <div id="proj2" class="dropdown-content">
+      <p>Descrizione progetto 2...</p>
+      <a href="LINK_NBVIEWER">Visualizza Notebook</a>
+      <a href="LINK_REPO">Codice su GitHub</a>
+    </div>
+  </div>
+
+  <!-- Progetto 3 -->
+  <div class="project">
+    <img src="img/progetto3.png" alt="Progetto 3" onclick="toggleDropdown('proj3')">
+    <div id="proj3" class="dropdown-content">
+      <p>Descrizione progetto 3...</p>
+      <a href="LINK_NBVIEWER">Visualizza Notebook</a>
+      <a href="LINK_REPO">Codice su GitHub</a>
+    </div>
+  </div>
+
+  <!-- Progetto Figma -->
+  <div class="project">
+    <img src="img/figma_preview.png" alt="Progetto Figma" onclick="toggleDropdown('figma')">
+    <div id="figma" class="dropdown-content">
+      <iframe style="border:1px solid #333; border-radius:5px;" 
+              width="600" height="400" 
+              src="LINK_FIGMA_EMBED"></iframe>
     </div>
   </div>
 
